@@ -1,0 +1,7 @@
+SELECT year Year,
+       d.name Name,
+       sd.total_race_starts [Races Started],
+       sd.total_points [Pts]
+  FROM season_driver sd
+       JOIN
+       driver d ON sd.driver_id = d.id

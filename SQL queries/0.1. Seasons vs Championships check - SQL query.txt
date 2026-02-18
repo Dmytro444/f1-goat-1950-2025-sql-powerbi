@@ -1,0 +1,5 @@
+SELECT count(year) 
+  FROM season
+UNION ALL
+SELECT sum(total_championship_wins) 
+  FROM driver;

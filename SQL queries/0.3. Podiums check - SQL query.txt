@@ -1,0 +1,7 @@
+SELECT sum(total_podiums) 
+  FROM driver
+UNION ALL
+SELECT count( * ) 
+  FROM race_data
+ WHERE type = "RACE_RESULT" AND
+       position_number IN (1, 2, 3);

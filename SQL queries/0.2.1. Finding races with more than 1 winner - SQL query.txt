@@ -1,0 +1,9 @@
+SELECT count(rd.race_id) number_of_winners,
+       r.official_name
+  FROM race_data rd
+       JOIN
+       race r ON rd.race_id = r.id
+ WHERE type = "RACE_RESULT" AND
+       position_number = 1
+ GROUP BY race_id
+HAVING number_of_winners > 1;

@@ -1,0 +1,12 @@
+SELECT d.name,
+       d.total_podiums,
+       count(rd.position_number) total_top_3s
+  FROM driver d
+       JOIN
+       race_data rd ON d.id = rd.driver_id
+ WHERE d.total_podiums > 0 AND
+       rd.position_number IN (1, 2, 3) AND
+       rd.type = "RACE_RESULT"
+ GROUP BY d.id
+HAVING total_podiums <> total_top_3s
+ ORDER BY total_podiums DESC;

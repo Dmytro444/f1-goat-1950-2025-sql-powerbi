@@ -1,0 +1,5 @@
+SELECT count(id) 
+  FROM race
+UNION ALL
+SELECT sum(total_race_wins) 
+  FROM driver;

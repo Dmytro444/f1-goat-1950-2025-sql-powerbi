@@ -1,0 +1,27 @@
+SELECT race_id [Race No.],
+       r.official_name [Grand Prix],
+       r.round [Round No.],
+       r.date Date,
+       r.drivers_championship_decider [Is Drv. Champ. Decider?],
+       position_number [Finish Pos.],
+       race_grid_position_text [Grid Pos.],
+       race_positions_gained [Pos. Gained/Lost],
+       race_qualification_position_number [Quali Pos.],
+       d.name Driver,
+       d.date_of_birth [Birth Date],
+       c.name Constructor,
+       em.name Engine,
+       tm.name Tyre,
+       race_points [Pts.]
+  FROM race_data rd
+       JOIN
+       race r ON rd.race_id = r.id
+       JOIN
+       driver d ON rd.driver_id = d.id
+       JOIN
+       constructor c ON rd.constructor_id = c.id
+       JOIN
+       engine_manufacturer em ON rd.engine_manufacturer_id = em.id
+       JOIN
+       tyre_manufacturer tm ON rd.tyre_manufacturer_id = tm.id
+ WHERE type = "RACE_RESULT"
