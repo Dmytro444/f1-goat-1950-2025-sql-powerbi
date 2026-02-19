@@ -1,5 +1,5 @@
 # F1 GOAT 1950-2025
-Analytical project evaluating historical performance of drivers competing in Formula 1 (1950–2025) using standardized scoring systems and cross-era normalization techniques.
+Analytical project evaluating historical performance of drivers competing in Formula 1 (1950-2025) using standardized scoring systems and cross-era normalization techniques.
 
 ## Objective
 Comparing drivers across different eras is statistically challenging due to:
